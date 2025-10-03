@@ -22,7 +22,7 @@ class Student (idIn:String,nameIn:String,courseIn:String,markIn:Double) {
     }
 
 
-    fun getgrade() {
+    fun getgrade():String {
         val grade=when(mark){
             in 70.0..100.0->"First"
             in 60.0..69.0->"2/1"
@@ -30,8 +30,12 @@ class Student (idIn:String,nameIn:String,courseIn:String,markIn:Double) {
             in 40.0..49.0->"Third"
             else ->"Fail"
         }
-        println(grade)
+        return(grade)
     }
+
+    fun didPass(): Boolean{
+            return mark <=40.0
+        }
 
     override fun toString(): String {
         return "id=$id,name=$name,course=$course,mark=$mark)"
