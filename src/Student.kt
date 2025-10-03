@@ -4,7 +4,7 @@ class Student (idIn:String,nameIn:String,courseIn:String,markIn:Double) {
     val name: String
     val course: String
 
-    var mark: Double = markIn
+    var mark: Double = 0.0
         set(newmark) {
             if (newmark in 0.0..100.00){
                 field = newmark
@@ -22,7 +22,7 @@ class Student (idIn:String,nameIn:String,courseIn:String,markIn:Double) {
     }
 
 
-    fun getgrade():String {
+    fun getGrade():String {
         val grade=when(mark){
             in 70.0..100.0->"First"
             in 60.0..69.0->"2/1"
