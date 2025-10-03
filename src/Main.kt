@@ -20,6 +20,7 @@ fun main() {
         val student=Student(id, name, course, mark)
 
         println(student)
+        println(student.getgrade())
     }
     println("Program finished")
 }
