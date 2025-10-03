@@ -17,10 +17,12 @@ fun main() {
         println("Enter your mark")
         val mark= readln().toDoubleOrNull() ?: 0.0
 
-        val student=Student(id, name, course, mark)
+        val student=Student(id, name, course)
 
         println(student)
-        println(student.getgrade())
+        println(student.getGrade())
+        println(student.didPass())
+
     }
     println("Program finished")
 }

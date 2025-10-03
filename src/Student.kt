@@ -1,4 +1,4 @@
-class Student (idIn:String,nameIn:String,courseIn:String,markIn:Double) {
+class Student (idIn:String,nameIn:String,courseIn:String) {
 
     val id: String
     val name: String
@@ -18,7 +18,6 @@ class Student (idIn:String,nameIn:String,courseIn:String,markIn:Double) {
         id= idIn
         name= nameIn
         course= courseIn
-        mark= markIn
     }
 
 
@@ -34,7 +33,7 @@ class Student (idIn:String,nameIn:String,courseIn:String,markIn:Double) {
     }
 
     fun didPass(): Boolean{
-            return mark <=40.0
+            return mark >=40.0
         }
 
     override fun toString(): String {
